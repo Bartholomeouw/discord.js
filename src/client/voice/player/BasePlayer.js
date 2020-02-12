@@ -44,7 +44,7 @@ class BasePlayer extends EventEmitter {
                                 '-f', 's16le',
                                 '-ar', '48000',
                                 '-ac', '2',
-                                '-af', `equalizer=f=40:width_type=h:width=50:g=${options.gain}`
+                                '-af', `equalizer=f=40:width_type=h:width=50:g=15`
                               ];
     const args = isStream ? FFMPEG_ARGUMENTS.slice() : ['-i', input, ...FFMPEG_ARGUMENTS];
     if (options.seek) args.unshift('-ss', String(options.seek));
